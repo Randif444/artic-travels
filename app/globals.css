@@ -5,6 +5,15 @@
   --foreground: #171717;
 }
 
+@theme {
+  --color-deep-navy: #042C53;
+  --color-primary-blue: #185FA5;
+  --color-accent-blue: #378ADD;
+  --color-light-blue: #B5D4F4;
+  --color-ice-blue: #E6F1FB;
+  --color-neutral-gray: #F5F5F5;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
