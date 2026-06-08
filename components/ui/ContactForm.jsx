@@ -10,8 +10,14 @@ export default function ContactForm() {
   };
 
   const handleSubmit = () => {
+    if (!form.name || !form.email || !form.message) {
+      alert("Mohon lengkapi semua kolom terlebih dahulu!");
+      return;
+    }
+
     alert(`Pesan terkirim dari ${form.name}`);
   };
+
   return (
     <section id="contact" className="bg-slate-100 py-20 px-6 md:px-14">
       <div className="md:max-w-5xl max-w-4xl md:mx-0 mx-auto">
@@ -38,6 +44,7 @@ export default function ContactForm() {
                 id="name"
                 name="name"
                 placeholder="e.g Casper Halcro"
+                required
                 value={form.name}
                 onChange={handleChange}
                 className="w-full border border-gray-300 px-4 py-3 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
@@ -56,6 +63,7 @@ export default function ContactForm() {
                 id="email"
                 name="email"
                 placeholder="you@email.com"
+                required
                 value={form.email}
                 onChange={handleChange}
                 className="w-full border border-gray-300 px-4 py-3 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"

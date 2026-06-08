@@ -8,7 +8,8 @@ const nextConfig = {
   publicRuntimeConfig: {
     apiUrl: "http://192.168.1.2:3000",
   },
-  allowedDevOrigins: ["192.168.1.2"],
+
+  allowedDevOrigins: ["192.168.1.8"],
 };
 
 export default nextConfig;

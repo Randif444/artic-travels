@@ -22,7 +22,7 @@ const ICONS = {
 };
 const FORMS = {
   regions: (
-    <div className="flex flex-col md:flex-row items-center gap-3 p-4 md:m-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row items-stretch gap-3 p-4 md:m-4">
       <div className="flex-1 flex items-center border border-gray-500 rounded-xl gap-3 px-4 py-2 w-full">
         <MapPin size={18} className="text-gray-400 shrink-0" />
         <div className="flex flex-col">
@@ -63,7 +63,7 @@ const FORMS = {
       <Button
         onClick={() => alert("Search functionality coming soon!")}
         type="submit"
-        className="w-full md:w-auto bg-primary-blue hover:bg-accent-blue text-white font-medium px-6 py-3 rounded-xl flex items-center gap-2 transition-colors"
+        className="w-full lg:w-auto bg-primary-blue hover:bg-accent-blue text-white font-medium px-6 py-3 rounded-xl flex items-center justify-center gap-2 transition-colors"
       >
         <Search size={16} />
         Book here
@@ -71,7 +71,7 @@ const FORMS = {
     </div>
   ),
   lodging: (
-    <div className="flex flex-wrap md:flex-row items-center gap-3 p-4 md:m-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row items-stretch gap-3 p-4 md:m-4">
       <div className="flex-1 flex items-center border border-gray-500 rounded-xl gap-3 px-4 py-2 w-full">
         <MapPin size={18} className="text-gray-400 shrink-0" />
         <div className="flex flex-col">
@@ -95,6 +95,7 @@ const FORMS = {
           />
         </div>
       </div>
+
       <div className="flex-1 flex items-center border border-gray-500 rounded-xl gap-3 px-4 py-2 w-full">
         <Calendar size={18} className="text-gray-400 shrink-0" />
         <div className="flex flex-col">
@@ -123,7 +124,7 @@ const FORMS = {
       <Button
         onClick={() => alert("Search functionality coming soon!")}
         type="submit"
-        className="w-full md:w-auto bg-primary-blue hover:bg-accent-blue text-white font-medium px-6 py-3 rounded-xl flex items-center gap-2 transition-colors"
+        className="w-full md:col-span-2 lg:col-span-1 lg:w-auto bg-primary-blue hover:bg-accent-blue text-white font-medium px-6 py-3 rounded-xl flex items-center justify-center gap-2 transition-colors"
       >
         <Search size={16} />
         Book here
@@ -131,7 +132,7 @@ const FORMS = {
     </div>
   ),
   resorts: (
-    <div className="flex flex-col md:flex-row items-center gap-3 p-4 md:m-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row items-stretch gap-3 p-4 md:m-4">
       <div className="flex-1 flex items-center border border-gray-500 rounded-xl gap-3 px-4 py-2 w-full">
         <MapPin size={18} className="text-gray-400 shrink-0" />
         <div className="flex flex-col">
@@ -172,7 +173,7 @@ const FORMS = {
       <Button
         onClick={() => alert("Search functionality coming soon!")}
         type="submit"
-        className="w-full md:w-auto bg-primary-blue hover:bg-accent-blue text-white font-medium px-6 py-3 rounded-xl flex items-center gap-2 transition-colors"
+        className="w-full lg:w-auto bg-primary-blue hover:bg-accent-blue text-white font-medium px-6 py-3 rounded-xl flex items-center justify-center gap-2 transition-colors"
       >
         <Search size={16} />
         Book here
@@ -180,7 +181,7 @@ const FORMS = {
     </div>
   ),
   passes: (
-    <div className="flex flex-col md:flex-row items-center gap-3 p-4 md:m-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row items-stretch gap-3 p-4 md:m-4">
       <div className="flex-1 flex items-center border border-gray-500 rounded-xl gap-3 px-4 py-2 w-full">
         <MapPin size={18} className="text-gray-400 shrink-0" />
         <div className="flex flex-col">
@@ -197,7 +198,7 @@ const FORMS = {
         <Calendar size={18} className="text-gray-400 shrink-0" />
         <div className="flex flex-col">
           <span className="text-xs text-gray-400">Pass duration</span>
-          <select className="text-sm text-gray-700 outline-none bg-transparent">
+          <select className="text-sm text-gray-700 outline-none bg-transparent w-full">
             <option>1 day</option>
             <option>3 days</option>
             <option>1 week</option>
@@ -222,7 +223,7 @@ const FORMS = {
       <Button
         onClick={() => alert("Search functionality coming soon!")}
         type="submit"
-        className="w-full md:w-auto bg-primary-blue hover:bg-accent-blue text-white font-medium px-6 py-3 rounded-xl flex items-center gap-2 transition-colors"
+        className="w-full lg:w-auto bg-primary-blue hover:bg-accent-blue text-white font-medium px-6 py-3 rounded-xl flex items-center justify-center gap-2 transition-colors"
       >
         <Search size={16} />
         Book here
@@ -262,7 +263,6 @@ export default function Hero() {
 
         {/* Search card */}
         <div className="bg-white rounded-2xl overflow-hidden">
-          {/* Tab bar — DULU sebelum form */}
           <div className="flex border-b border-gray-200">
             {OPTION.map((option) => (
               <button

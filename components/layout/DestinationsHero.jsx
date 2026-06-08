@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function DestinationsAll() {
+export default function DestinationsHero() {
   return (
     <>
       <section className="relative md:h-[400px] h-[400px]  md:pt-20 pt-8 flex items-center">

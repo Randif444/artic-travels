@@ -13,7 +13,11 @@ export default function Navbar() {
   const [activeHash, setActiveHash] = useState("");
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    handleScroll();
 
     const handleHashChange = () => {
       setActiveHash(window.location.hash);
@@ -36,11 +40,13 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between text-light-blue transition-colors duration-300 ${
-        scrolled ? "bg-deep-navy shadow-md" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-[100] px-6 py-4 flex items-center justify-between transition-colors duration-300 ${
+        scrolled || isOpen
+          ? "bg-deep-navy shadow-md text-white"
+          : "bg-transparent text-light-blue"
       }`}
     >
-      <div className="flex items-center">
+      <div className="flex items-center relative z-50">
         <Image
           src="/images/new-logo.png"
           alt="Artic Travel Logo"
@@ -49,7 +55,9 @@ export default function Navbar() {
           className="inline-block rounded-xl mr-1"
         />
         <h2 className="text-xl text-white font-semibold">
-          <Link href="/">Artic Travel</Link>
+          <Link href="/" onClick={() => setIsOpen(false)}>
+            Artic Travel
+          </Link>
         </h2>
       </div>
 
@@ -76,21 +84,25 @@ export default function Navbar() {
         })}
       </div>
 
-      <div className="md:hidden z-50">
+      <div className="md:hidden relative z-[999]">
         <button
+          type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="text-white focus:outline-none flex items-center justify-center"
+          className="text-white p-2 focus:outline-none flex items-center justify-center rounded-lg cursor-pointer touch-manipulation"
         >
           {isOpen ? (
-            <X className="w-7 h-7" strokeWidth={2} />
+            <X className="w-7 h-7 pointer-events-none" strokeWidth={2.5} />
           ) : (
-            <AlignRight className="w-7 h-7" strokeWidth={2} />
+            <AlignRight
+              className="w-7 h-7 pointer-events-none"
+              strokeWidth={2.5}
+            />
           )}
         </button>
       </div>
 
       <div
-        className={`fixed top-0 left-0 w-full h-screen bg-deep-navy text-light-blue flex flex-col items-center pt-24 space-y-8 md:hidden transition-transform duration-300 ease-in-out -z-10 ${
+        className={`fixed top-0 left-0 w-full h-screen bg-deep-navy text-light-blue flex flex-col items-center pt-24 space-y-8 md:hidden transition-transform duration-300 ease-in-out z-40 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
