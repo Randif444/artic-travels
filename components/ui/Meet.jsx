@@ -8,16 +8,14 @@ export default function Meet() {
         Meet the Experts
       </h2>
 
-      {/* Di HP 1 baris, di Tablet 2 baris, di Desktop 4 baris */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {MEET.map((meet) => (
-          // flex flex-col items-center menjaga agar semua konten benar-benar rata tengah
           <div key={meet.id} className="flex flex-col items-center text-center">
             <div className="relative mb-5">
               <Image
                 src={meet.image}
-                alt={meet.title} // <-- Jauh lebih bagus untuk SEO & Aksesibilitas
-                height={200} // <-- Saya sesuaikan ukurannya sedikit agar pas di berbagai layar
+                alt={meet.title}
+                height={200}
                 width={200}
                 className="object-cover rounded-full aspect-square shadow-sm"
               />
