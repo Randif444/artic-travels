@@ -10,7 +10,6 @@ import FilterBar from "../ui/FilterBar";
 export default function DestinationMain() {
   const [visibleCount, setVisibleCount] = useState(9);
   const [activeFilter, setActiveFilter] = useState("All");
-  //   const [filters, setFilters] = useState({ difficulty: [], amenities: [], price: null }); --cooming soon
 
   const filteredDestinations =
     activeFilter === "All"

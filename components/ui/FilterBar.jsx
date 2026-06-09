@@ -1,5 +1,4 @@
 "use client";
-import { SlidersHorizontal } from "lucide-react";
 import Button from "./Button";
 
 export default function FilterBar({ activeFilter, setActiveFilter }) {
@@ -60,12 +59,6 @@ export default function FilterBar({ activeFilter, setActiveFilter }) {
             >
               Asia
             </Button>
-          </div>
-          <div
-            // onClick={handleMoreFilterClick}
-            className="flex flex-shrink-0 overflow-x-hidden cursor-pointer p-2 m-0 bg-gray-50 rounded-xl border border-gray-300 text-xs gap-2"
-          >
-            <SlidersHorizontal size={17} /> More Filter
           </div>
         </div>
       </div>
