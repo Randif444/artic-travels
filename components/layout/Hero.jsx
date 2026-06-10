@@ -66,68 +66,68 @@ const FORMS = {
         className="w-full lg:w-auto bg-primary-blue hover:bg-accent-blue text-white font-medium px-6 py-3 rounded-xl flex items-center justify-center gap-2 transition-colors"
       >
         <Search size={16} />
-        Book here
+        Search
       </Button>
     </div>
   ),
   lodging: (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row items-stretch gap-3 p-4 md:m-4">
-      <div className="flex-1 flex items-center border border-gray-500 rounded-xl gap-3 px-4 py-2 w-full">
-        <MapPin size={18} className="text-gray-400 shrink-0" />
-        <div className="flex flex-col">
-          <span className="text-xs text-gray-400">Destination</span>
-          <input
-            type="text"
-            placeholder="Where to stay?"
-            className="text-sm text-gray-700 outline-none bg-transparent placeholder:text-gray-400"
-          />
+    <div className="flex flex-col gap-3 p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="flex items-center border border-gray-500 rounded-xl gap-3 px-4 py-2">
+          <MapPin size={18} className="text-gray-400 shrink-0" />
+          <div className="flex flex-col">
+            <span className="text-xs text-gray-400">Destination</span>
+            <input
+              type="text"
+              placeholder="Where to stay?"
+              className="text-sm text-gray-700 outline-none bg-transparent placeholder:text-gray-400"
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="flex-1 flex items-center border border-gray-500 rounded-xl gap-3 px-4 py-2 w-full">
-        <Calendar size={18} className="text-gray-400 shrink-0" />
-        <div className="flex flex-col">
-          <span className="text-xs text-gray-400">Check-in</span>
-          <input
-            type="date"
-            placeholder="mm/dd/yyyy"
-            className="text-sm text-gray-700 outline-none bg-transparent placeholder:text-gray-400"
-          />
+        <div className="flex items-center border border-gray-500 rounded-xl gap-3 px-4 py-2">
+          <Calendar size={18} className="text-gray-400 shrink-0" />
+          <div className="flex flex-col">
+            <span className="text-xs text-gray-400">Check-in</span>
+            <input
+              type="date"
+              className="text-sm text-gray-700 outline-none bg-transparent"
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="flex-1 flex items-center border border-gray-500 rounded-xl gap-3 px-4 py-2 w-full">
-        <Calendar size={18} className="text-gray-400 shrink-0" />
-        <div className="flex flex-col">
-          <span className="text-xs text-gray-400">Check-out</span>
-          <input
-            type="date"
-            placeholder="mm/dd/yyyy"
-            className="text-sm text-gray-700 outline-none bg-transparent placeholder:text-gray-400"
-          />
+        <div className="flex items-center border border-gray-500 rounded-xl gap-3 px-4 py-2">
+          <Calendar size={18} className="text-gray-400 shrink-0" />
+          <div className="flex flex-col">
+            <span className="text-xs text-gray-400">Check-out</span>
+            <input
+              type="date"
+              className="text-sm text-gray-700 outline-none bg-transparent"
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="flex-1 flex items-center border border-gray-500 rounded-xl gap-3 px-4 py-2 w-full">
-        <Users size={18} className="text-gray-400 shrink-0" />
-        <div className="flex flex-col">
-          <span className="text-xs text-gray-400">Guest</span>
-          <input
-            type="number"
-            min="1"
-            placeholder="2 guests"
-            className="text-sm text-gray-700 outline-none bg-transparent placeholder:text-gray-400"
-          />
+        <div className="flex items-center border border-gray-500 rounded-xl gap-3 px-4 py-2">
+          <Users size={18} className="text-gray-400 shrink-0" />
+          <div className="flex flex-col">
+            <span className="text-xs text-gray-400">Guests</span>
+            <input
+              type="number"
+              min="1"
+              placeholder="2 guests"
+              className="text-sm text-gray-700 outline-none bg-transparent placeholder:text-gray-400"
+            />
+          </div>
         </div>
       </div>
 
       <Button
         onClick={() => alert("Search functionality coming soon!")}
         type="submit"
-        className="w-full md:col-span-2 lg:col-span-1 lg:w-auto bg-primary-blue hover:bg-accent-blue text-white font-medium px-6 py-3 rounded-xl flex items-center justify-center gap-2 transition-colors"
+        className="w-full bg-primary-blue hover:bg-accent-blue text-white font-medium px-6 py-3 rounded-xl flex items-center justify-center gap-2 transition-colors"
       >
         <Search size={16} />
-        Book here
+        Search
       </Button>
     </div>
   ),
@@ -176,7 +176,7 @@ const FORMS = {
         className="w-full lg:w-auto bg-primary-blue hover:bg-accent-blue text-white font-medium px-6 py-3 rounded-xl flex items-center justify-center gap-2 transition-colors"
       >
         <Search size={16} />
-        Book here
+        Search
       </Button>
     </div>
   ),
@@ -226,7 +226,7 @@ const FORMS = {
         className="w-full lg:w-auto bg-primary-blue hover:bg-accent-blue text-white font-medium px-6 py-3 rounded-xl flex items-center justify-center gap-2 transition-colors"
       >
         <Search size={16} />
-        Book here
+        Search
       </Button>
     </div>
   ),
