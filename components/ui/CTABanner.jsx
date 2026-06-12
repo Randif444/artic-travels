@@ -38,7 +38,7 @@ export default function CTABanner() {
       <div className="flex pl-6 gap-3">
         <Link
           href="#cta"
-          className="flex border bg-accent-blue hover:bg-primary-blue text-sm border-gray-800 rounded-xl font-medium p-2 gap-2"
+          className="flex border bg-accent-blue  hover:bg-primary-blue text-sm border-gray-800 rounded-xl font-medium p-2 gap-2"
         >
           <Calendar size={18} />
           Book here

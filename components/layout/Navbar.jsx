@@ -74,8 +74,8 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               onClick={() => isContact && setActiveHash("#contact")}
-              className={`hover:text-accent-blue transition-colors relative ${
-                isActive ? "text-accent-blue font-semibold" : ""
+              className={`hover:text-accent-blue transition-colors text-medium relative ${
+                isActive ? "text-accent-blue text-medium font-bold" : ""
               }`}
             >
               {link.label}

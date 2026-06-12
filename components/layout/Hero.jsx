@@ -244,7 +244,7 @@ export default function Hero() {
         className="object-cover"
       />
 
-      <div className="absolute inset-0 bg-deep-navy/50" />
+      <div className="absolute inset-0 bg-deep-navy/40" />
 
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4">
         {/* Headline */}
